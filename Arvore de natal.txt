@@ -1,0 +1,29 @@
+ALGORITMO "DesenharArvoreCentralizada"
+VAR
+    tamanho, i, espacos, simbolos, j: INTEIRO
+INICIO
+    ESCREVA("Insira o tamanho da árvore: ")
+    LEIA(tamanho)
+
+    SE tamanho <= 0 ENTAO
+        ESCREVA("O tamanho deve ser um inteiro positivo.")
+    SENAO
+        PARA i <- 1 ATÉ tamanho FAÇA
+            espacos <- tamanho - i
+            simbolos <- 2 * i - 1
+
+            // Imprimir os espaços à esquerda
+            PARA j <- 1 ATÉ espacos FAÇA
+                ESCREVA(" ")
+            FIMPARA
+
+            // Imprimir os símbolos #
+            PARA j <- 1 ATÉ simbolos FAÇA
+                ESCREVA("#")
+            FIMPARA
+
+            // Pular para a próxima linha
+            ESCREVAL("")
+        FIMPARA
+    FIMSE
+FIMALGORITMO
